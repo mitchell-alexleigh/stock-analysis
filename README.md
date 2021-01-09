@@ -7,6 +7,8 @@ The purpose of this project was to improve the performance of existing VBA code.
 3.	The output is populated 
 4.	A pop-up box informs the user of the number of seconds for which the code ran
 
+In the document below "Original Code" refers to the VBA code for the AllStocksAnalysis() macro in Module1 of the VBA_Challenge.xlsm file. "Refactored Code" refers to the VBA code for the Sub AllStocksAnalysisRefactored() in Module3 of the VBA_Challenge.xlsm file
+
 ## Results 
 
 ### Analysis
