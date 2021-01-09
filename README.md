@@ -13,56 +13,57 @@ The purpose of this project was to improve the performance of existing VBA code.
 
 Both the original and refactored code create variables for the start and end time for the timer, create and initialize a variable to store the users year input, start the timer to start counting number seconds the code runs, set the value of cell A1 to a title for the output, set the values of cells C1 to C3 to be the header row for the output, initialize an array for the tickers, and gets the number of rows to loop through. 
 
-![Start of Code]() 
-Start_of_code
+![Start of Code](/resources/start_of_code.png) 
 
 The original code utilizes nested for loops. The code in the outer loop starts by setting the value of the ticker variable to corresponding value in the ticker array. It also sets the initial value of the totalVolume variable to 0. 
 
-![Og Start Outer Loop]()
+![Og Start Outer Loop](/resources/or_start_outer_loop.png)
 
 The inner loop loops through each row of the data work sheet. First, the code inside this loop compares the value of the ticker array set in the outer loop to the value of the ticker cell in the data worksheet. If the values match, the totalVolume variable in increased by the value of the volume cell in the data worksheet. Second, a condition is used to determine and sets the value of the startingPrice variable. Third, another condition is used to determine and sets the value of the ending price. This concludes the inner loop. 
 
-![Og inner Loop]()
+![Og inner Loop](/resources/or_inner_loop.png)
 
 After the inner loop the code continues in the outer loop to generate the output. This loop will repeat 12 times for each of the ticker symbols in the ticker array. 
 
-![OG end of outer loop]()
+![OG end of outer loop](/resources/or_end_outer_loop.png)
 Lastly, the endTime variable is set to timer to stop counting the number of seconds the code ran and a message box is set to display the number of seconds the code ran.   
 
-![OG End Sub]()
-
-The original code does not include text or conditional formatting. The formatting for this code is done in a separate macro and is not included in the count of seconds. 
-
-![OG formatting]() 
+![OG End Sub](/resources/or_end_sub.png)
 
 The Refactored utilizes multiple arrays and separate for loops. After the ticker array and the rowCount are initialized, a variable is created for tickerIndex and three more arrays are created. 
 
-![RF Var and Arrays]()
+![RF Var and Arrays](/resources/rf_var_and_arrays.png)
 
 Next the refactored code creates a loop to initialize the value of the tickerVolume array. This creates 12 ticker volumes and sets the starting value for each to 0. 
 
-![RF tickerVolumn Loop]()
+![RF tickerVolumn Loop](/resources/rf_tickerVolumn_loop.png)
 
 The refactored code contains a second loop that loops through each row of the data worksheet to update values of the arrays. First, the tickerVolume variable in increased by the value of the volume cell in the data worksheet for the corresponding tickerIndex.  Second, a condition is used to determine and sets the value of the tickerStartingPrice variable. Third, another condition is used to determine and sets the value of the ending price and increase the tickerIndex after the row of the tickerEndingPrice. This concludes the second loop. 
 
-![RF Loops]()
+![RF Loops](/resources/rf_loops.png)
 
 The refactored code contains a third loop that loops through each of the arrays to display their output. 
 
-![RF outputs]()
+![RF outputs](/resources/rf_outputs.png)
 
 Next, the refactored code contains the code for text and conditional formatting. Unlike the original code, the formatting is included in the same macro. 
 
 Lastly,  the endTime variable is set to time to stop counting the number of seconds the code ran and a message box is set to display the runtime.
  
-![RF end sub]()
+![RF end sub](/resources/rf_end_sub.png)
 
 ### Improvements 
-![OG 2017 Runtime]()
-![RF 2017 Runtime]()
 
-![OG 2018 Runtime]()
-![RF 2018 Runtime]()
+#### Original 2017 Runtime
+![OG 2017 Runtime](/resources/or_runtime_2017.png)
+#### Refactored 2017 Runtime
+![RF 2017 Runtime](/resources/RF_runtime_2017.png)
+
+#### Original 2018 Runtime
+![OG 2018 Runtime](/resources/or_runtime_2018.png)
+
+#### Refactored 2018 Runtime
+![RF 2018 Runtime](/resources/RF_runtime_2018.png)
 
 ## Summary
 
